@@ -1,18 +1,18 @@
-@import "tailwindcss";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 
 :root {
-    --background: #0D1F2A; /* Dark blue */
-    --foreground: #FFFFFF; /* White */
-    --gold: #FFD700; /* Gold */
-    --dark-blue: #1A2E3B;
-    --hover-gold: #F0C808;
-}
-
-@theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-sans: Arial, sans-serif; /* Kubeai's font */
-    --font-mono: Arial, sans-serif;
+  --background: #0D1F2A; /* Dark blue */
+  --foreground: #FFFFFF; /* White */
+  --gold: #FFD700; /* Gold */
+  --dark-blue: #1A2E3B;
+  --hover-gold: #F0C808;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: sans-serif; /* Kubeai's font */
+  --font-mono: monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +21,7 @@
         --foreground: #FFFFFF; /* White */
     }
 }
+
 
 body {
     background-color: var(--background);

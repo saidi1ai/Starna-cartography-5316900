@@ -48,14 +48,16 @@ const GlobeComponent = () => {
     animate();
 
     // Cleanup
+    let currentMountRef = mountRef.current
     return () => {
-        if (mountRef.current) {
-            mountRef.current.removeChild(renderer.domElement);
+        if (currentMountRef) {
+            currentMountRef.removeChild(renderer.domElement);
         }
     };
   }, []);
 
   return <div ref={mountRef} />;
 };
+
 
 export default GlobeComponent;
